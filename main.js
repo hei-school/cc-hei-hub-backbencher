@@ -1,6 +1,7 @@
 const prompt = require("prompt-sync")();
 const { addError } = require('./error-100-400');
 const { handleErrors } = require('./error-401-423'); 
+const { handleOtherErrors } = require('./error-500-507');
 const fs = require('fs');
 
 let tableau = [];
@@ -25,6 +26,7 @@ function ajouterNombre() {
   try {
     addError(tableau, nombre);
     handleErrors(tableau, nombre); 
+    handleOtherErrors(tableau, nombre)
     // Ajouter l'élément au tableau uniquement si aucune erreur n'est détectée
     tableau.push(nombre);
     console.log("Tableau", [...tableau]);
