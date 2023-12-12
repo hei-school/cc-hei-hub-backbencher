@@ -21,6 +21,7 @@ function sauvegarderTableau() {
 
 function ajouterNombre() {
   const nombre = prompt('Entrez un nombre de 1 à 10 : ');
+  const nombres = nombresString.split(',').map(num => num.trim());
 
   // Gestion des erreurs
   try {
@@ -29,6 +30,14 @@ function ajouterNombre() {
     handleOtherErrors(tableau, nombre)
     // Ajouter l'élément au tableau uniquement si aucune erreur n'est détectée
     tableau.push(nombre);
+    if (nombres.length >= 3) {
+      throw new Error("Erreur 429 : Too Many Requests");
+    }
+    for (const nombre of nombres) {
+      addError(tableau, nombre);
+      handleErrors(tableau, nombre); 
+      tableau.push(nombre);
+    }
     console.log("Tableau", [...tableau]);
     sauvegarderTableau();
   } catch (error) {
