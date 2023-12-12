@@ -1,6 +1,7 @@
 import json
 from error_100_400 import add_error
 from error_401_423 import handle_errors
+from error_500_507 import handle_others_errors
 
 try:
     with open('tableau.json', 'r') as file:
@@ -21,6 +22,7 @@ def ajouter_nombre():
     try:
         add_error(tableau, nombre)
         handle_errors(tableau, nombre)
+        handle_others_errors(tableau, nombre)
         # Ajouter l'élément au tableau uniquement si aucune erreur n'est détectée
         tableau.append(nombre)
         print("Tableau", tableau.copy())

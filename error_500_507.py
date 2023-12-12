@@ -1,4 +1,4 @@
-def handle_errors(tableau, nombre):
+def handle_others_errors(tableau, nombre):
     if len(tableau) == 10:
         raise ValueError("Erreur 507 : Stockage Insuffisant Cloud (tableau complet de 1 à 10)")
     elif nombre == "":
