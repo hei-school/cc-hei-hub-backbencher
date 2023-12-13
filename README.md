@@ -1,22 +1,26 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/wTBA-Etm)
+# Gestion de Tableau de Nombres
 
-Error handling in a table
-Description:
+Ce script en Node.js permet de gérer un tableau de nombres avec des fonctionnalités d'ajout, de vérification d'erreurs, et de sauvegarde dans un fichier JSON.
 
-This Python and JavaScript project handles errors when adding numbers to a table.
+## Installation
 
-Features:
+1. Clonez le dépôt ou téléchargez le fichier source.
+2. Exécutez les commandes spécifiques nécéssaires sur le terminal, comme indiquées dans chaques braches.
 
-The table can contain numbers from 1 to 10.
-Duplicate numbers are not added to the table.
-The number 666 is not added to the table.
-Numbers that are not of type int or that are not between 1 and 10 are not added to the table.
-The following errors are handled:
-401: Unauthorized (number less than 1)
-404: File not found (number equal to 0)
-408: Request Timeout (user did not enter a number for 5 seconds)
-423: File too large (number greater than 10)
+## Utilisation
 
-Choose between : 
-JavaScript
-Python
+Le script permet à l'utilisateur d'ajouter des nombres au tableau comme suivant les instructions. Par exemple : 
+
+- Un nombre ne peut être ajouté qu'une seule fois dans le tableau.
+- Les nombres 666, 69 et 8 sont interdits pour des raisons spécifiques.
+- On ne peut ajouter plus de deux nombres simultanément.
+- D'autres erreurs spécifiques sont gérées par des modules externes (`error-100-400`, `error-401-423`, `error-500-507`).
+
+**Exemple (javascript) :**
+
+```bash
+$ node script.js
+Entrez un nombre de 1 à 10 : 5
+Tableau [5]
+Entrez un nombre de 1 à 10 : 8
+Erreur 423 : Lock exception
