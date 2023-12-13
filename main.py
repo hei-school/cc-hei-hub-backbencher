@@ -15,17 +15,23 @@ def sauvegarder_tableau():
         json.dump(tableau, file)
 
 def ajouter_nombre():
-    nombre = input('Entrez un nombre de 1 à 10 : ')
+    nombres_string = input('Entrez un nombre de 1 à 10 (séparés par des virgules) : ')
+    nombres = [num.strip() for num in nombres_string.split(',')]
 
     # Gestion des erreurs
     try:
-        add_error(tableau, nombre)
-        handle_errors(tableau, nombre)
-        # Ajouter l'élément au tableau uniquement si aucune erreur n'est détectée
-        tableau.append(nombre)
+        if len(nombres) >= 3:
+            raise Exception("Erreur 429 : Too Many Requests")
+
+        for nombre in nombres:
+            add_error(tableau, nombre)
+            handle_errors(tableau, nombre)
+            # Ajouter l'élément au tableau uniquement si aucune erreur n'est détectée
+            tableau.append(nombre)
+
         print("Tableau", tableau.copy())
         sauvegarder_tableau()
-    except ValueError as error:
+    except Exception as error:
         print(error)
 
 ajouter_nombre()
