@@ -14,7 +14,6 @@ Le script permet à l'utilisateur d'ajouter des nombres au tableau comme suivant
 - Un nombre ne peut être ajouté qu'une seule fois dans le tableau.
 - Les nombres 666, 69 et 8 sont interdits pour des raisons spécifiques.
 - On ne peut ajouter plus de deux nombres simultanément.
-- D'autres erreurs spécifiques sont gérées par des modules externes (`error-100-400`, `error-401-423`, `error-500-507`).
 
 **Exemple (javascript) :**
 
