@@ -1,1 +1,9 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/wTBA-Etm)
+## Installation et excecution 
+
+1. Ouvrez un terminal.
+2. Accédez au répertoire où se trouve le script.
+
+### Exécution du Script
+
+```bash
+python main.py
