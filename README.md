@@ -1,6 +1,6 @@
 # Gestion de Tableau de Nombres
 
-Ce script en Node.js permet de gérer un tableau de nombres avec des fonctionnalités d'ajout, de vérification d'erreurs, et de sauvegarde dans un fichier JSON.
+Ce script permet de gérer un tableau de nombres avec des fonctionnalités d'ajout, de vérification d'erreurs, et de sauvegarde
 
 ## Installation
 
